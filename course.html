@@ -76,7 +76,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- Header -->
 <header class="w3-display-container w3-highway-red w3-center w3-animate-top" style="padding:80px 16px; animation-duration: 1s;">
   <h1>Course Outline</h1>
-  <p class="w3-xlarge" style="padding: 0 60px 0 60px">A 9-week course teaching the Indiana Computer Science Standards using a diverse, interactive collection of resources.</p>
+  <p class="w3-xlarge" style="padding: 0 60px 0 60px">A sample 9-week overview of a diverse approach to the Indiana Computer Science Standards</p>
 </header>
 
 <!-- Side Navbar -->
@@ -103,17 +103,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
   <div id="week1Anchor"></div>
   <h1 style="margin: 0px 0 0 20px">Week 1 - 3</h1>
-  <div class="w3-container w3-padding-large w3-card" style="min-height: 400px; margin-left: 20px; margin-right: 20px">
+  <div class="w3-container w3-padding-large w3-card" style="min-height: 250px; margin-left: 20px; margin-right: 20px">
     <p style="font-size: 29px">
-      For the first two or three weeks, we suggest having each student work on an overarching project about a computer-related topic of their choice that utilizes the Google Suite (Google Docs, Sheets, and Slides). This could be a project that introduces how to use each Google Suite Software and then asks the student to create one of their own about a computer related topic. Not only would this teach them how to use each software, they can learn about some of the topics you may cover later on.
+      For the first two to three weeks, we suggest each student use Google Suite (Google Docs, Sheets, and Slides) to make a project introducing Google Suite,
+      which would teach them how to use the software and scaffold further learning.
     </p>
   </div>
 
   <div id="week4Anchor"></div>
   <h1 style="margin: 40px 0 0 20px">Week 4</h1>
-  <div class="w3-container w3-padding-large w3-card" style="min-height: 300px; margin-left: 20px; margin-right: 20px">
+  <div class="w3-container w3-padding-large w3-card" style="min-height: 250px; margin-left: 20px; margin-right: 20px">
     <p style="font-size: 29px">
-    After completing the project, start teaching students about the significant impact technology has on our everyday lives. This will help students understand the importance of learning these technology-related topics. Many <a href="docs/StandardsResources.pdf" target="_blank">Indiana state standards for computer science</a> cover the impact technology has on our lives. We put this earlier in the course because it doesn’t require any prior knowledge and is important for the students to know as we delve deeper into the course. 
+    Post-Project, teach students about the significant impact of technology upon their daily lives, a focus of many Indiana state standards.
+    The lack of foreknowledge needed may bolster the students' affect if the first project proved difficult.
     </p>
   </div>
 
@@ -137,7 +139,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <h1 style="margin: 40px 0 0 20px">Week 7 - 9</h1>
   <div class="w3-container w3-padding-large w3-card" style="min-height: 300px; margin-left: 20px; margin-right: 20px; margin-bottom: 3em;">
     <p style="font-size: 29px">
-    For the last three weeks, we suggest starting an <a href="https://www.khanacademy.org/computing/computer-programming/programming" target="_blank">Intro to Programming course provided by Khan Academy</a>. This is free and teaches simple JavaScript while making it fun for middle schoolers. During these weeks, you can take breaks to teach the last standards such as algorithms and parallelization. The programming course includes many of the standards within it making it a great finish to the class and an easy way to cover them. These are hardest topics to cover which is why we spent the weeks before preparing them for such difficult work. 
+    For the last three weeks, we suggest starting an <a href="https://www.khanacademy.org/computing/computer-programming/programming" target="_blank">Intro to Programming course provided by Khan Academy</a>. This is free and teaches simple JavaScript while making it fun for middle schoolers. During these weeks, you can take breaks to teach the last standards such as algorithms and parallelization. The programming course includes many of the standards within it making it a great finish to the class and an easy way to cover them. These are hardest topics to cover which is why we spent the weeks before preparing them for such difficult work.
     </p>
   </div>
   <p style="font-size: 24px"class="w3-padding">This is a pdf overview of the course 9-week course: <a href="docs/CourseStructure.pdf" target="_blank">Click here to view a full description</a></p>
@@ -145,7 +147,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Footer -->
 <footer class="footer w3-display-container" style="background-color: #111">
-  <div class="w3-third">  
+  <div class="w3-third">
     <p style="color: #C4C4C4; margin-left: 175px">
       <a href="mailto:dllargent@bsu.edu" style="text-decoration: none">Supervised by: David Largent</a><br>
       <a href="mailto:wpenglish@bsu.edu" style="text-decoration: none">Developed by: William English</a><br>
@@ -166,7 +168,7 @@ function menuToggle() {
     var x = document.getElementById("navDemo");
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-    } else { 
+    } else {
         x.className = x.className.replace(" w3-show", "");
     }
 }
@@ -175,11 +177,11 @@ function menuToggle() {
 var x = window.matchMedia("(min-width: 700px)")
 window.onscroll = function() {scrollFunction(x)};
 function scrollFunction(x) {
-  var width = Math.max(window.screen.width, window.innerWidth); 
+  var width = Math.max(window.screen.width, window.innerWidth);
   if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250 && window.innerWidth > 700) {
     document.getElementById("sidenav").style.left = "0";
     document.getElementById("shiftDIV").style.marginLeft = "200px";
-    
+
 
   } else {
     document.getElementById("sidenav").style.left = "-160px";
