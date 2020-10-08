@@ -70,29 +70,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </style>
 <body>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-highway-red w3-card w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-highway-red" href="javascript:void(0);" onclick="menuToggle()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
-    <a href="course" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Course</a>
-    <a href="standards" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Standards</a>
-    <a href="resource" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Resources</a>
-    <a href="about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
-    <div id ="searchDIV" class=" searchdiv">
-        <input class = "searchdiv" type="text" id="mySearch" onkeyup="searching()" placeholder="Search..." title="Type in a category" style="height: 40px; width: 400px; font-size: 18px; padding: 11px; right: 10px; border:1px solid black; margin-top: 5px; z-index: 10; position: fixed; top: 0px;">
-    </div>
-  </div>
+HTML;
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="index" class="w3-bar-item w3-button w3-padding-large">Home</a>
-    <a href="course" class="w3-bar-item w3-button w3-padding-large">Course</a>
-    <a href="activities" class="w3-bar-item w3-button w3-padding-large">Standards</a>
-    <a href="standards" class="w3-bar-item w3-button w3-padding-large">Resources</a>
-    <a href="about" class="w3-bar-item w3-button w3-padding-large">About Us</a>
-  </div>
-</div>
+echo file_get_contents(__DIR__ . "/components/navbar.html");
+
+echo <<<HTML
 
 <!-- Header -->
 <header class="w3-display-container w3-highway-red w3-center w3-animate-top" style="padding:80px 16px; animation-duration: 1s">

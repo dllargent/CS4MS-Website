@@ -58,27 +58,11 @@ echo <<<HTML
         </p>
     </header>
 
-    <!-- Navbar -->
-    <div class="w3-top">
-        <div class="w3-bar w3-highway-red w3-card w3-large">
-            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-highway-red" href="javascript:void(0);"
-               onclick="menuToggle()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            <a href="index" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
-            <a href="course" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Course</a>
-            <a href="standards" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Standards</a>
-            <a href="resource" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Resources</a>
-            <a href="about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">About Us</a>
-        </div>
+HTML;
 
-        <!-- Navbar on small screens -->
-        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-            <a href="index" class="w3-bar-item w3-button w3-padding-large">Home</a>
-            <a href="course" class="w3-bar-item w3-button w3-padding-large">Course</a>
-            <a href="standards" class="w3-bar-item w3-button w3-padding-large">Standards</a>
-            <a href="resource" class="w3-bar-item w3-button w3-padding-large">Resources</a>
-            <a href="about" class="w3-bar-item w3-button w3-padding-large">About Us</a>
-        </div>
-    </div>
+echo file_get_contents(__DIR__ . "/components/navbar.html");
+
+echo <<<HTML
 
     <!-- About Us Div -->
     <div class="w3-center w3-container w3-animate-bottom" style="margin-top: 30px; margin-bottom:20px; animation-duration: .75s">
