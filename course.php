@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<?php
+echo <<<HTML
+<!DOCTYPE html>
 <html lang="en">
 <title>Course</title>
 <meta charset="UTF-8">
@@ -241,3 +243,4 @@
 
 </body>
 </html>
+HTML;

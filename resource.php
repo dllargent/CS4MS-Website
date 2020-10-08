@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<?php
+echo <<<HTML
+<!DOCTYPE html>
 <html lang="en">
 <title>Resources</title>
 <meta charset="UTF-8">
@@ -423,3 +425,4 @@ x.addListener(scrollFunction)
 
 </body>
 </html>
+HTML;
