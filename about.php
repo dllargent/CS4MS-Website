@@ -2,6 +2,7 @@
 echo <<<HTML
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <title>About Us</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,11 +14,15 @@ echo <<<HTML
 <link rel="icon" href="icon.ico">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28932854-3"></script>
+<script src="scripts/menu.js"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'UA-28932854-3');
+    window.onload = () => {
+    	setActiveMenuItems();
+    }
 </script>
 
 <!-- CSS for Classes -->
@@ -45,6 +50,7 @@ echo <<<HTML
         color: #a6001a;
     }
 </style>
+</head>
 
 <body>
     <header class="w3-display-container w3-highway-red w3-center w3-animate-top" style="padding:80px 16px; animation-duration: .75s;">
