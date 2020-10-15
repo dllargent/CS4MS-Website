@@ -8,7 +8,7 @@ const setActiveMenuItems = () => {
 	}
 
 	// If href points to last part of url, then make active
-	document.querySelectorAll('nav a[href="' + pathArray[pathArray.length - 1]).forEach(
+	document.querySelectorAll('nav a[href="' + pathArray[pathArray.length - 1] + '"').forEach(
 		(link) => makeMenuItemActive(link)
 	)
 };
