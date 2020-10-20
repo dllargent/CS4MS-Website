@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<?php
+echo <<<HTML
+<!DOCTYPE html>
 <html lang="en">
 <title>CS4MS</title>
 <meta charset="UTF-8">
@@ -11,12 +13,15 @@
 <link rel="icon" href="icon.ico">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28932854-3"></script>
+<script src="scripts/menu.js"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'UA-28932854-3');
-
+    window.onload = () => {
+    	setActiveMenuItems();
+    }
 </script>
 
 <!-- CSS for classes -->
@@ -47,27 +52,11 @@
 
 
 <body>
-    <!-- Navbar -->
-    <div class="w3-top">
-        <!-- Navbar on regular screens -->
-        <div class="w3-bar w3-highway-red w3-card w3-large">
-            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-highway-red" href="javascript:void(0);" onclick="menuToggle()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            <a href="index" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-            <a href="course" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Course</a>
-            <a href="standards" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Standards</a>
-            <a href="resource" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Resources</a>
-            <a href="about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
-        </div>
+HTML;
 
-        <!-- Navbar on small screens -->
-        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-            <a href="index" class="w3-bar-item w3-button w3-padding-large">Home</a>
-            <a href="course" class="w3-bar-item w3-button w3-padding-large">Course</a>
-            <a href="standards" class="w3-bar-item w3-button w3-padding-large">Standards</a>
-            <a href="resource" class="w3-bar-item w3-button w3-padding-large">Resources</a>
-            <a href="about" class="w3-bar-item w3-button w3-padding-large">About Us</a>
-        </div>
-    </div>
+echo file_get_contents(__DIR__ . "/components/navbar.html");
+
+echo <<<HTML
 
     <!-- Header -->
     <header class="w3-display-container w3-highway-red w3-center w3-animate-top" style="padding:80px 16px; animation-duration: 1s;">
@@ -153,3 +142,4 @@
 
 </body>
 </html>
+HTML;
