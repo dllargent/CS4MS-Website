@@ -1,0 +1,76 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", sans-serif;
+}
+
+.w3-bar, h1, button {
+    font-family: "Montserrat", sans-serif;
+}
+
+.fa-anchor, .fa-coffee {
+    font-size: 200px;
+}
+
+.footer {
+    min-height: 125px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+.under:hover {
+    color: #a6001a;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: -160px;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: left 0.5s;
+}
+
+.sidenav a {
+    padding: 10px 8px 6px 10px;
+    position: relative;
+    top: 30px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #C22E2E;
+}
+
+.sidenav.small a {
+    padding: 0 8px 6px 10px;
+    font-size: 16px;
+}
+
+.leftBound {
+    left: 300px;
+}
+
+#shiftDIV {
+    transition: margin-left 0.5s;
+}
+
+.documentRef:hover {color: #a6001a;}
+
+@media screen and (max-width: 600px) {
+    .searchdiv {
+        max-width: 200px;
+        margin-right: 70px;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .searchdiv {
+        max-width: 200px;
+    }
+}
