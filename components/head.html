@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>%{TITLE}%</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Abel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="icon.ico">
+    %{STYLESHEETS}%
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28932854-3"></script>
+    <script src="scripts/menu.js"></script>
+    %{SCRIPTS}%
+    <script>
+	    // Used to toggle the menu on small screens when clicking on the menu button
+	    function menuToggle() {
+		    var x = document.getElementById("navDemo");
+		    if (x.className.indexOf("w3-show") == -1) {
+			    x.className += " w3-show";
+		    } else {
+			    x.className = x.className.replace(" w3-show", "");
+		    }
+	    }
+
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-28932854-3');
+		window.onload = () => {
+			setActiveMenuItems();
+		}
+    </script>
+</head>
+
+<body>
