@@ -79,16 +79,19 @@ a {
     transition: margin-left 0.5s;
 }
 
-.documentRef:hover {color: #a6001a;}
+.documentRef:hover {
+    color: #a6001a;
+}
 
 @media screen and (max-width: 600px) {
-    .searchdiv {
+    .search-container {
         max-width: 200px;
         margin-right: 70px;
     }
 }
+
 @media screen and (max-width: 1050px) {
-    .searchdiv {
+    .search-container {
         max-width: 200px;
     }
 }
@@ -100,4 +103,17 @@ a {
 .logo {
     height: 100px;
     margin-top: 8px;
+}
+
+.input-box {
+    height: 40px;
+    width: 400px;
+    font-size: 18px;
+    padding: 11px;
+    right: 10px;
+    border: 1px solid black;
+    margin-top: 5px;
+    z-index: 10;
+    position: fixed;
+    top: 0;
 }
