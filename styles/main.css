@@ -55,6 +55,7 @@ header {
     padding-top: 20px;
     transition: left 0.5s;
     animation-duration: 1s;
+    z-index: 1;
 }
 
 .sidenav a {
