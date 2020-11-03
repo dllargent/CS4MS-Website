@@ -11,6 +11,6 @@ echo $head->getHtml();
 $navbar = new Navbar();
 echo $navbar->getHtml();
 
-echo file_get_contents(__DIR__ . "/pages/course.html");
-echo file_get_contents(__DIR__ . "/components/footer.html");
+include __DIR__ . "/pages/course.html";
+include __DIR__ . "/components/footer.html";
 
