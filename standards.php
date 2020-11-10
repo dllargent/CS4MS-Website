@@ -11,5 +11,8 @@ echo $head->getHtml();
 $navbar = new Navbar();
 echo $navbar->getHtml();
 
-echo file_get_contents(__DIR__ . "/pages/standards.html");
-echo file_get_contents(__DIR__ . "/components/footer.html");
+$uri = $_SERVER['REQUEST_URI'];
+$filepath = str_replace(Head::getRoot(), "", urldecode($uri));
+
+include __DIR__ . "/pages/" . $filepath;
+include __DIR__ . "/components/footer.html";

@@ -13,6 +13,6 @@ echo $head->getHtml();
 $navbar = new Navbar();
 $navbar->addSearchBar();
 echo $navbar->getHtml();
-echo file_get_contents(__DIR__ . "/pages/resource.html");
-echo file_get_contents(__DIR__ . "/components/footer.html");
+include __DIR__ . "/pages/resource.html";
+include __DIR__ . "/components/footer.html";
 

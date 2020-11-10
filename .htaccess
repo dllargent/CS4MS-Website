@@ -1,3 +1,11 @@
 RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+Options +FollowSymLinks
+IndexIgnore */*
+# Turn on the RewriteEngine
+#  Rules
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule standards/(.*)$ standards.php [L]
