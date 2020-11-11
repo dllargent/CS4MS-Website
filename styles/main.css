@@ -99,6 +99,7 @@ header {
 
 @media screen and (max-width: 1050px) {
     .search-container {
+        margin-right: 70px;
         max-width: 200px;
     }
 }
@@ -123,6 +124,12 @@ header {
     z-index: 10;
     position: fixed;
     top: 0;
+}
+
+@media screen and (max-width: 1050px) {
+    .input-box {
+        width: auto;
+    }
 }
 
 .w3-animate-bottom, .w3-animate-top, .w3-animate-left {
@@ -267,4 +274,65 @@ header .w3-display-container {
 .index-wrapper .w3-container p {
     padding: 0 2rem 0 2rem;
     font-size: 16pt;
+}
+
+nav > div.w3-bar {
+    overflow: visible;
+}
+
+ul.navbar, ul.dropdown {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: visible;
+}
+
+ul.navbar > li {
+    display: block;
+    position: relative;
+    float: left;
+}
+
+ul.navbar li ul.dropdown {
+    top: 100%;
+    position: absolute;
+}
+
+ul {
+    padding: 0;
+}
+
+ul.navbar li ul.dropright {
+    left: 100%;
+    position: absolute;
+}
+
+ul.navbar li ul li {
+    display: block;
+    background: #a6001a;
+    width: 100%;
+}
+
+ul.navbar li ul.dropdown li a {
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+}
+
+li ul.dropdown, li ul.dropright {
+    display: none;
+}
+
+li:hover > ul.dropdown, li:hover > ul.dropright {
+    display: flex;
+    flex-direction: column;
+}
+
+.w3-hover-white:not(:hover) {
+    color: white;
+}
+
+.w3-hover-white:hover > a:hover {
+    /* If w-3 is replaced, we can remove !important */
+    background-color: #FFF !important;
 }

@@ -8,6 +8,7 @@
 
 class Head
 {
+	private $root;
 	private $title;
 	private $stylesheets = [];
 	private $scripts = [];
@@ -37,6 +38,7 @@ class Head
 		$html = str_replace("%{TITLE}%", $this->title, $html);
 		$html = str_replace("%{STYLESHEETS}%", $this->getStyleSheetsHtml(), $html);
 		$html = str_replace('%{SCRIPTS}%', $this->getScriptsHtml(), $html);
+		$html = str_replace('%{DOCUMENT_BASE}%', self::getRoot(), $html);
 		return $html;
 	}
 
@@ -51,7 +53,8 @@ class Head
 
 	private function getStyleString(string $sheetName): string
 	{
-		return "<link rel='stylesheet' href='./styles/$sheetName.css'>";
+		$root = self::getRoot();
+		return "<link rel='stylesheet' href='{$root}/styles/$sheetName.css'>";
 	}
 
 	private function getScriptsHtml(): string
@@ -63,9 +66,15 @@ class Head
 		return $scriptsHtml;
 	}
 
+	public static function getRoot()
+	{
+		return str_replace($_SERVER['DOCUMENT_ROOT'], '', realpath(__DIR__ . "/../")) . "/";
+	}
+
 	private function getScriptString(string $scriptName): string
 	{
-		return "<script src='./scripts/$scriptName.js'></script>";
+		$root = self::getRoot();
+		return "<script src='{$root}/scripts/$scriptName.js'></script>";
 	}
 
 }
