@@ -1,0 +1,46 @@
+<nav class="w3-top" role="navigation">
+    <div class="w3-bar w3-highway-red w3-card w3-large">
+        <ul class="navbar">
+            <li>
+                <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-highway-red"
+                   href="javascript:void(0);" onclick="menuToggle()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            </li>
+            <li>
+                <a class="w3-bar-item w3-button w3-padding-large w3-hover-white" href="index">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large w3-hover-white" href="course">
+                    Course
+                </a>
+            </li>
+            <li class="w3-hover-white">
+                <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large" href="#">
+                    Standards
+                </a>
+                %{STANDARDS_DROPDOWN}%
+            </li>
+            <li>
+                <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large w3-hover-white" href="resource">
+                    Resources
+                </a>
+            </li>
+            <li>
+                <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large w3-hover-white" href="about">
+                    About Us
+                </a>
+            </li>
+        </ul>
+        %{SEARCH}%
+    </div>
+
+    <!-- Mobile Navbar -->
+    <div class="w3-bar-block w3-white w3-hide w3-hide-large w3-large" id="navDemo">
+        <a class="w3-bar-item w3-button w3-padding-large" href="index">Home</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="course">Course</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="standards">Standards</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="resource">Resources</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="about">About Us</a>
+    </div>
+</nav>
