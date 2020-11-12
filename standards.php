@@ -5,7 +5,7 @@ require_once __DIR__ . "/utils/Navbar.php";
 
 $head = new Head("Standards");
 $head->addStyleSheet('main');
-$head->addScript('sidebar-scroll');
+$head->addScript('toggleActive');
 echo $head->getHtml();
 
 $navbar = new Navbar();

@@ -23,6 +23,7 @@ header {
 }
 
 .footer {
+    margin-top: 10px;
     background-color: #111111;
     min-height: 125px;
     left: 0;
@@ -335,4 +336,54 @@ li:hover > ul.dropdown, li:hover > ul.dropright {
 .w3-hover-white:hover > a:hover {
     /* If w-3 is replaced, we can remove !important */
     background-color: #FFF !important;
+}
+
+
+
+/* accordion */
+.accordion {
+    padding: 15px;
+    margin-left: 10%;
+    width: 60%;
+    list-style-position: inside;
+    background-color: #CCCCCC77;
+    box-shadow: 2px 2px #1a1a1a;
+}
+
+.accordion + .accordion {
+    margin-top: 15px;
+}
+
+.accordion .accordion-item {
+    border-top: 1px solid #222222AA;
+    cursor: pointer;
+}
+
+.accordion-item > h3::after {
+    display: inline-block;
+    margin-left: 10px;
+    content: '▾';
+    transform: rotateX(180deg);
+    transition: all 0.4s;
+}
+
+.accordion-item.active > h3::after {
+    transform: rotateX(0)
+}
+
+.accordion-item .accordion-content {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    transition: all ease-in-out 0.6s;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 300px;
+    height: auto;
+    overflow: auto;
+}
+
+.accordion-content :first-child {
+    margin-top: 0;
 }
