@@ -12,7 +12,11 @@ $navbar = new Navbar();
 echo $navbar->getHtml();
 
 $uri = $_SERVER['REQUEST_URI'];
-$filepath = str_replace(Head::getRoot(), "", urldecode($uri));
+if (Head::getRoot() !== '/') {
+    $filepath = str_replace(Head::getRoot(), "", urldecode($uri));
+} else {
+    $filepath = urldecode($uri);
+}
 
 include __DIR__ . "/pages/" . $filepath;
 include __DIR__ . "/components/footer.html";
