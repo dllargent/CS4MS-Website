@@ -53,8 +53,7 @@ class Head
 
 	private function getStyleString(string $sheetName): string
 	{
-		$root = self::getRoot();
-		return "<link rel='stylesheet' href='{$root}/styles/$sheetName.css'>";
+		return "<link rel='stylesheet' href='styles/$sheetName.css'>";
 	}
 
 	private function getScriptsHtml(): string
