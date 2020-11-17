@@ -11,7 +11,7 @@ class Head
 	private $root;
 	private $title;
 	private $stylesheets = [];
-	private $scripts = [];
+	private $scripts = ['toggleActive'];
 
 	public function __construct(string $title = null)
 	{

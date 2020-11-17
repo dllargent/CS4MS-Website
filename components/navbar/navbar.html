@@ -16,7 +16,8 @@
                 </a>
             </li>
             <li class="w3-hover-white">
-                <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large" href="#">
+                <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large down-arrow-toggle"
+                   onclick="toggleRowActive(this.parentNode)">
                     Standards
                 </a>
                 %{STANDARDS_DROPDOWN}%
@@ -36,11 +37,25 @@
     </div>
 
     <!-- Mobile Navbar -->
-    <div class="w3-bar-block w3-white w3-hide w3-hide-large w3-large" id="navDemo">
-        <a class="w3-bar-item w3-button w3-padding-large" href="index">Home</a>
-        <a class="w3-bar-item w3-button w3-padding-large" href="course">Course</a>
-        <a class="w3-bar-item w3-button w3-padding-large" href="standards">Standards</a>
-        <a class="w3-bar-item w3-button w3-padding-large" href="resource">Resources</a>
-        <a class="w3-bar-item w3-button w3-padding-large" href="about">About Us</a>
+    <div class="w3-bar-block w3-white w3-hide w3-hide-large w3-large navbar-mobile" id="mobile-navbar">
+        <ul>
+            <li>
+                <a class="w3-bar-item w3-button w3-padding-large" href="index">Home</a>
+            </li>
+            <li>
+                <a class="w3-bar-item w3-button w3-padding-large" href="course">Course</a>
+            </li>
+            <li>
+                <a class="w3-bar-item w3-button w3-padding-large down-arrow-toggle"
+                   onclick="toggleRowActive(this.parentNode)">Standards</a>
+                %{STANDARDS_DROPDOWN}%
+            </li>
+            <li>
+                <a class="w3-bar-item w3-button w3-padding-large" href="resource">Resources</a>
+            </li>
+            <li>
+                <a class="w3-bar-item w3-button w3-padding-large" href="about">About Us</a>
+            </li>
+        </ul>
     </div>
 </nav>

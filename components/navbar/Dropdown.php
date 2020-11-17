@@ -50,7 +50,7 @@ class Dropdown
 	{
 		$url = $file->getUrl();
 		$html = "<li class='w3-hover-white'>";
-		$html .= "<a class='w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large' href='$url'>
+		$html .= "<a class='w3-bar-item w3-button w3-padding-large' href='$url'>
                             {$file->name}
                       </a>";
 		$html .= "</li>";
@@ -60,7 +60,7 @@ class Dropdown
 	private function formHtmlForDirectory(Directory $directory)
 	{
 		$html = "<li class='w3-hover-white'>";
-		$html .= "<a class='w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large' href='#'>
+		$html .= "<a class='w3-bar-item w3-button w3-padding-large down-arrow-toggle' onclick='toggleRowActive(this.parentNode)'>
                             {$directory->name}
                       </a>";
 

@@ -2,6 +2,10 @@
     --light: #C4C4C4;
 }
 
+*[onclick] {
+    cursor: pointer;
+}
+
 body, h1, h2, h3, h4, h5, h6 {
     font-family: "Lato", sans-serif;
 }
@@ -324,7 +328,10 @@ li ul.dropdown, li ul.dropright {
     display: none;
 }
 
-li:hover > ul.dropdown, li:hover > ul.dropright {
+li:hover > ul.dropdown,
+li:hover > ul.dropright,
+li.active > ul.dropdown,
+li.active > ul.dropright {
     display: flex;
     flex-direction: column;
 }
@@ -363,13 +370,13 @@ li:hover > ul.dropdown, li:hover > ul.dropright {
 
 .accordion .accordion-item {
     border-top: 1px solid #222222AA;
-    cursor: pointer;
 }
 
 .accordion-item > h3 {
     font-size: 18px;
 }
 
+.down-arrow-toggle::after,
 .accordion-item > h3::after {
     display: inline-block;
     margin-left: 10px;
@@ -379,6 +386,17 @@ li:hover > ul.dropdown, li:hover > ul.dropright {
     transition: all 0.4s;
 }
 
+.w3-button.down-arrow-toggle::after {
+    color: #fff;
+}
+
+li:active > .w3-button.down-arrow-toggle::after,
+li:hover > .w3-button.down-arrow-toggle::after {
+    color: #111;
+}
+
+li:hover > .down-arrow-toggle::after,
+.active > .down-arrow-toggle::after,
 .accordion-item.active > h3::after {
     transform: rotateX(0)
 }
@@ -393,9 +411,25 @@ li:hover > ul.dropdown, li:hover > ul.dropright {
 .accordion-item.active .accordion-content {
     max-height: 300px;
     height: auto;
-    overflow: auto;
+    overflow: scroll;
 }
 
 .accordion-content :first-child {
     margin-top: 0;
+}
+
+#mobile-navbar *, #mobile-navbar *::after {
+    color: black!important;
+}
+
+.navbar-mobile ul {
+    list-style: none;
+}
+
+.navbar-mobile li {
+    margin-left: 10px;
+}
+
+.navbar-mobile ul li {
+    margin-left: 20px;
 }

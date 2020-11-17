@@ -32,10 +32,4 @@ class Navbar
 		return $html;
 	}
 
-	private function setStandardsDropdown()
-	{
-		$standardsDirectory = new Directory(__DIR__ . "/../pages/standards");
-
-	}
-
 }
