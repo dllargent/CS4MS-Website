@@ -10,11 +10,6 @@
                     Home
                 </a>
             </li>
-            <li>
-                <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large w3-hover-white" href="course">
-                    Course
-                </a>
-            </li>
             <li class="w3-hover-white">
                 <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large down-arrow-toggle"
                    onclick="toggleRowActive(this.parentNode)">
@@ -22,10 +17,12 @@
                 </a>
                 %{STANDARDS_DROPDOWN}%
             </li>
-            <li>
-                <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large w3-hover-white" href="resource">
+            <li class="w3-hover-white">
+                <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large down-arrow-toggle"
+                   onclick="toggleRowActive(this.parentNode)">
                     Resources
                 </a>
+                %{RESOURCES_DROPDOWN}%
             </li>
             <li>
                 <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large w3-hover-white" href="about">
@@ -43,15 +40,18 @@
                 <a class="w3-bar-item w3-button w3-padding-large" href="index">Home</a>
             </li>
             <li>
-                <a class="w3-bar-item w3-button w3-padding-large" href="course">Course</a>
-            </li>
-            <li>
                 <a class="w3-bar-item w3-button w3-padding-large down-arrow-toggle"
-                   onclick="toggleRowActive(this.parentNode)">Standards</a>
+                   onclick="toggleRowActive(this.parentNode)">
+                    Standards
+                </a>
                 %{STANDARDS_DROPDOWN}%
             </li>
             <li>
-                <a class="w3-bar-item w3-button w3-padding-large" href="resource">Resources</a>
+                <a class="w3-bar-item w3-button w3-padding-large down-arrow-toggle"
+                   onclick="toggleRowActive(this.parentNode)">
+                    Resources
+                </a>
+                %{RESOURCES_DROPDOWN}%
             </li>
             <li>
                 <a class="w3-bar-item w3-button w3-padding-large" href="about">About Us</a>

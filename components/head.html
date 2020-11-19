@@ -33,7 +33,16 @@
 		gtag('config', 'UA-28932854-3');
 		window.onload = () => {
 			setActiveMenuItems();
-		}
+		};
+
+		// Make hash tags relative to page and not base
+        document.addEventListener('DOMContentLoaded', function(){
+            const pathname = window.location.href.split('#')[0];
+            console.log({pathname});
+            document.querySelectorAll('a[href^="#"]').forEach(function(node) {
+                node.href = pathname + node.hash;
+            });
+        })
     </script>
 </head>
 

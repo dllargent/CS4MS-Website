@@ -13,6 +13,7 @@ use cs4ms\components\navbar\Dropdown;
 class Navbar
 {
 	private $hasSearchBar = false;
+	private $html;
 
 	public function addSearchBar()
 	{
@@ -21,15 +22,21 @@ class Navbar
 
 	public function getHtml(): string
 	{
-		$html = file_get_contents(__DIR__ . "/../components/navbar/navbar.html");
-		$dropdown = new Dropdown('standards');
-		$html = str_replace("%{STANDARDS_DROPDOWN}%", $dropdown->getHtml(), $html);
-		$html = str_replace("%{SEARCH}%",
+		$this->html = file_get_contents(__DIR__ . "/../components/navbar/navbar.html");
+		$this->addDropdowns(['standards', 'resources']);
+		$this->html = str_replace("%{SEARCH}%",
 			$this->hasSearchBar
 				? file_get_contents(__DIR__ . "/../components/navbar/search-bar.html")
 				: "",
-			$html);
-		return $html;
+			$this->html);
+		return $this->html;
+	}
+
+	private function addDropdowns(array $dropdownNames) {
+		array_walk($dropdownNames, function (string $name) {
+			$dropdown = new Dropdown($name);
+			$this->html = str_replace('%{' . strtoupper($name) . '_DROPDOWN}%', $dropdown->getHtml(), $this->html);
+		});
 	}
 
 }

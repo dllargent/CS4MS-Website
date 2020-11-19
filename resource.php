@@ -2,6 +2,7 @@
 
 require_once __DIR__ . "/utils/Head.php";
 require_once __DIR__ . "/utils/Navbar.php";
+require_once __DIR__ . "/utils/Util.php";
 
 $head = new Head("Resources");
 $head->addStyleSheet('main');
@@ -13,6 +14,6 @@ echo $head->getHtml();
 $navbar = new Navbar();
 $navbar->addSearchBar();
 echo $navbar->getHtml();
-include __DIR__ . "/pages/resource.html";
+include Util::getPagePath();
 include __DIR__ . "/components/footer.html";
 
