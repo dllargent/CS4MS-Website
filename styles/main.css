@@ -14,6 +14,10 @@ a {
     text-decoration: none;
 }
 
+a[href]:not(.w3-bar-item) {
+    text-decoration: underline;
+}
+
 .w3-bar, h1, button {
     font-family: "Montserrat", sans-serif;
 }
@@ -267,6 +271,37 @@ header .w3-display-container {
     font-size: 30px;
 }
 
+.index-wrapper {
+    margin: 0 10%;
+}
+
+.index-wrapper > div {
+    display: inline-flex;
+    margin: 0 20px;
+    width: 35%;
+}
+
+@media screen and (max-width: 800px){
+    .index-wrapper {
+        margin: 0 5%;
+    }
+
+    .index-wrapper > div {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 650px){
+
+    .index-wrapper > div {
+        width: 80%;
+        margin: 20px auto;
+        display: block;
+    }
+}
+
+
+
 .index-wrapper .w3-container {
     min-height: 480px;
 }
@@ -346,7 +381,6 @@ li.active > ul.dropright {
 }
 
 
-
 /* accordion */
 .accordion {
     padding: 15px;
@@ -419,7 +453,7 @@ li:hover > .down-arrow-toggle::after,
 }
 
 #mobile-navbar *, #mobile-navbar *::after {
-    color: black!important;
+    color: black !important;
 }
 
 .navbar-mobile ul {
@@ -436,4 +470,17 @@ li:hover > .down-arrow-toggle::after,
 
 .accordion-content ul li {
     margin-left: 20px;
+}
+
+.hover-grow:hover {
+    font-size: calc(100% + 5px);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.row.center > * {
+    flex: 1;
 }
