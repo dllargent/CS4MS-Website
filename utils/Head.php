@@ -8,10 +8,9 @@
 
 class Head
 {
-	private $root;
 	private $title;
 	private $stylesheets = [];
-	private $scripts = ['toggleActive'];
+	private $scripts = [];
 
 	public function __construct(string $title = null)
 	{
@@ -38,7 +37,6 @@ class Head
 		$html = str_replace("%{TITLE}%", $this->title, $html);
 		$html = str_replace("%{STYLESHEETS}%", $this->getStyleSheetsHtml(), $html);
 		$html = str_replace('%{SCRIPTS}%', $this->getScriptsHtml(), $html);
-		$html = str_replace('%{DOCUMENT_BASE}%', self::getRoot(), $html);
 		return $html;
 	}
 
@@ -53,7 +51,7 @@ class Head
 
 	private function getStyleString(string $sheetName): string
 	{
-		return "<link rel='stylesheet' href='styles/$sheetName.css'>";
+		return "<link rel='stylesheet' href='./styles/$sheetName.css'>";
 	}
 
 	private function getScriptsHtml(): string
@@ -65,15 +63,9 @@ class Head
 		return $scriptsHtml;
 	}
 
-	public static function getRoot()
-	{
-		return str_replace($_SERVER['DOCUMENT_ROOT'], '', realpath(__DIR__ . "/../")) . "/";
-	}
-
 	private function getScriptString(string $scriptName): string
 	{
-		$root = self::getRoot();
-		return "<script src='{$root}/scripts/$scriptName.js'></script>";
+		return "<script src='./scripts/$scriptName.js'></script>";
 	}
 
 }
