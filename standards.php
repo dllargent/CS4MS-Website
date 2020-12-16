@@ -10,6 +10,7 @@ echo $head->getHtml();
 
 $navbar = new Navbar();
 echo $navbar->getHtml();
-
+echo "<div class='standards-wrapper'>";
 include Util::getPagePath();
+echo "</div>";
 include __DIR__ . "/components/footer.html";

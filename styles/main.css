@@ -403,17 +403,33 @@ li.active > ul.dropright {
     background-color: #FFF !important;
 }
 
+.standards-wrapper .accordion:first-of-type {
+    margin-top: 40px;
+}
 
 /* accordion */
 .accordion {
     padding: 15px;
     margin-left: 10%;
-    width: 60%;
+    width: 1000px;
     list-style-position: inside;
     background-color: #DDDDDD77;
     box-shadow: 2px 2px 4px #1a1a1a55;
     border-radius: 0 20px 20px 20px;
     color: #1a1a1a;
+}
+
+@media screen and (max-width: 1200px) {
+    .accordion {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .accordion {
+        margin-left: 2%;
+        width: 95%;
+    }
 }
 
 .accordion > h2 {
@@ -422,7 +438,7 @@ li.active > ul.dropright {
 }
 
 .accordion + .accordion {
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .accordion .accordion-item {
