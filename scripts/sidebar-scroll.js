@@ -3,17 +3,15 @@ window.onscroll = function () { scrollFunction(x) };
 function scrollFunction(x) {
 	// var width = Math.max(window.screen.width, window.innerWidth);
 	if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250 && window.innerWidth > 700) {
-		document.getElementById("sidenav").style.left = "0";
-		document.getElementById("shiftDIV").style.marginLeft = "200px";
-
-
+		document.getElementById("sidenav").style.width = "200px";
+		document.getElementById("sidenav-fixed").style.position="fixed";
 	} else {
-		document.getElementById("sidenav").style.left = "-160px";
-		document.getElementById("shiftDIV").style.marginLeft = "20px";
+		document.getElementById("sidenav").style.width = "0";
+		document.getElementById("sidenav-fixed").style.position="static";
 	}
 	if (window.innerWidth < 500) {
-		document.getElementById("sidenav").style.left = "-160px";
-		document.getElementById("shiftDIV").style.marginLeft = "20px";
+		document.getElementById("sidenav").style.width= "static";
+		document.getElementById("sidenav-fixed").style.position="static";
 	}
 }
-x.addListener(scrollFunction)
+x.addListener(scrollFunction);

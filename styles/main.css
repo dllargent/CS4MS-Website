@@ -18,6 +18,10 @@ a[href]:not(.w3-bar-item) {
     text-decoration: underline;
 }
 
+a.no-decoration {
+    text-decoration: none !important;
+}
+
 .w3-bar, h1, button {
     font-family: "Montserrat", sans-serif;
 }
@@ -42,6 +46,10 @@ header {
     flex: 1;
 }
 
+.resources-wrapper + .footer {
+    margin-top: 0;
+}
+
 .footer > * {
     display: flex;
     flex-direction: column;
@@ -54,17 +62,17 @@ header {
 }
 
 .sidenav {
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    top: 50px;
-    left: -160px;
+    width: 200px;
     background-color: #111;
     overflow-x: hidden;
     padding-top: 20px;
-    transition: left 0.5s;
+    transition: all 0.5s;
     animation-duration: 1s;
-    z-index: 1;
+}
+
+.fixed {
+    position: fixed;
+    top: 40px;
 }
 
 .sidenav a {
@@ -246,6 +254,15 @@ header .w3-display-container {
     }
 }
 
+.resources-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.resources-wrapper .content {
+    flex: 1;
+}
+
 .resources-wrapper ul {
     margin-bottom: 3em;
     list-style: none;
@@ -255,7 +272,7 @@ header .w3-display-container {
     margin: auto;
     animation-duration: 1s;
     max-height: 100px;
-    max-width: 73%;
+    max-width: 95%;
 }
 
 .resources-wrapper h1 {
@@ -269,7 +286,7 @@ header .w3-display-container {
 }
 
 .standards-wrapper h1 {
-    margin: 40px 0 0 20px;
+    margin: 40px 0 0 0;
 }
 
 .resources-wrapper li i + a {
@@ -279,7 +296,6 @@ header .w3-display-container {
 
 .standards-wrapper h1 + div {
     min-height: 300px;
-    margin-left: 20px;
     margin-right: 20px;
 }
 
