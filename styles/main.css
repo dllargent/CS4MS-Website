@@ -46,6 +46,8 @@ header {
     flex: 1;
 }
 
+
+
 .resources-wrapper + .footer {
     margin-top: 0;
 }
@@ -55,6 +57,29 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 0 10px;
+}
+
+@media screen and (max-width: 800px){
+
+    .footer {
+        flex-direction: column;
+        padding: 0 10px 20px 0;
+        flex-flow:row wrap;
+    }
+
+    .footer > * {
+        align-items: flex-start;
+    }
+
+    .footer .w3-third {
+        padding: 0 30px;
+        width: 45%;
+    }
+
+    .footer .w3-third:first-of-type {
+        width: 100%;
+    }
+
 }
 
 .under:hover {
