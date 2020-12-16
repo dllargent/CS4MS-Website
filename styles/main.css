@@ -158,6 +158,10 @@ header .w3-display-container {
     margin: 0 auto;
 }
 
+.dropdown .w3-hover-white {
+    background-color: #b6002a;
+}
+
 .w3-display-container .w3-xxxlarge {
     transform: translate(0%, 21%);
     font-family: 'Abel', serif;
@@ -192,34 +196,45 @@ header .w3-display-container {
 }
 
 .about-wrapper > div {
-    min-height: 550px;
     padding-bottom: 20px;
 }
 
-.about-wrapper > div > h1 {
-    padding-top: 16px;
+.group-description .w3-half, .about-wrapper img {
+    width: 47%;
+    margin: 0 1%;
 }
 
 .about-wrapper img {
-    width: 49%;
     border: ridge;
+}
+
+
+.about-wrapper .w3-card-2 {
+    width: 80%;
+    margin: 0 auto 20px auto;
+    line-height: 2em;
+}
+
+@media only screen and (min-width: 1000px) {
+    .about-wrapper .w3-card-2 {
+        width: 800px;
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .about-wrapper .w3-card-2 {
+        width: 95%;
+        margin: 0 10px 20px 10px;
+    }
+}
+
+.about-wrapper .w3-card-2 {
+    padding: 20px;
 }
 
 .about-wrapper .solo-img {
     margin-right: 49%;
-}
-
-.group-description h1 {
-    text-align: center;
-    margin-top: -8px;
-}
-
-.group-description h3 {
-    margin-top: -21px;
-}
-
-.group-description :first-of-type(h3) {
-    margin-right: 40px;
 }
 
 .resources-wrapper ul {
@@ -375,7 +390,7 @@ li.active > ul.dropright {
     color: white;
 }
 
-.w3-hover-white:hover > a:hover {
+.w3-hover-white:hover a:hover {
     /* If w-3 is replaced, we can remove !important */
     background-color: #FFF !important;
 }
@@ -452,6 +467,9 @@ li:hover > .down-arrow-toggle::after,
     margin-top: 0;
 }
 
+#mobile-navbar * {
+    background-color: white !important;
+}
 #mobile-navbar *, #mobile-navbar *::after {
     color: black !important;
 }
