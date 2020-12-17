@@ -96,7 +96,7 @@ header {
 }
 
 .fixed {
-    position: fixed;
+    position: static;
     top: 40px;
 }
 

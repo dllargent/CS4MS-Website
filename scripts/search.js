@@ -1,3 +1,4 @@
+// Yes this needs cleaned up. Loop over a query selector and it can do all of this in a few lines and be dynamic.
 function searching() {
 	var input, filter, ul, li, a, i;
 	input = document.getElementById("mySearch");
