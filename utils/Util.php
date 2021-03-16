@@ -13,7 +13,8 @@ class Util
 	public static function getPagePath() {
 		$uri = $_SERVER['REQUEST_URI'];
 		if (Head::getRoot() !== '/') {
-			$filepath = str_replace('/CS4MS-Website/', "", urldecode($uri));
+		    $uri = str_replace('\\', '/', $uri);
+			$filepath = str_replace(Head::getRoot(), "", urldecode($uri));
 		} else {
 			$filepath = urldecode($uri);
 		}
