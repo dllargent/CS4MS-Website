@@ -15,7 +15,7 @@ It is recommended that this is run on an Apache web server with PHP 7.1+.
 1. Start the web server. On MAMP and XAMPP, click `Start Server`.
 1. Visit http://localhost/CS4MS-Website in your browser, and the website should appear. The port number may vary, check your configuration. On MAMP, it will be http://localhost:8888/CS4MS-Website by default.
   
-###Linux Configuration
+### Linux Configuration
 1. After installing the Apache server, install PHP by running `sudo apt install -y php libapache2-mod-php`.
 1. Open the Apache configuration file in the nano editor by typing `sudo nano /etc/apache2/apache2.conf`.
 1. Find the tag that begins with `<Directory /var/www/>`. Change the line that says `AllowOverride None` to `AllowOverride All`.
