@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 require_once __DIR__ . "/utils/Head.php";
 require_once __DIR__ . "/utils/Navbar.php";
@@ -14,3 +14,4 @@ echo "<div class='standards-wrapper'>";
 include Util::getPagePath();
 echo "</div>";
 include __DIR__ . "/components/footer.html";
+
