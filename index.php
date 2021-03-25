@@ -1,4 +1,5 @@
 ﻿<?php
+
 require_once __DIR__ . "/utils/Head.php";
 require_once __DIR__ . "/utils/Navbar.php";
 

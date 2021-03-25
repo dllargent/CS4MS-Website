@@ -64,9 +64,10 @@ class Head
         return $scriptsHtml;
     }
 
-    public static function getRoot()
+    public static function getRoot(): string
     {
-        return str_replace($_SERVER['DOCUMENT_ROOT'], '', realpath(__DIR__ . "/../")) . "/";
+        $documentRoot = str_replace("/", DIRECTORY_SEPARATOR, $_SERVER['DOCUMENT_ROOT']);
+        return str_replace($documentRoot, '', realpath(__DIR__ . "/../")) . DIRECTORY_SEPARATOR;
     }
 
     private function getScriptString(string $scriptName): string

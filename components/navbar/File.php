@@ -26,6 +26,7 @@ class File
 		$path = realpath($this->path);
 		// Remove Base
 		$path = str_replace(realpath(__DIR__ . "/../.."), "", $path);
+		$path = str_replace('\\', '/', $path);
 		return str_replace("/pages/", "", $path);
 	}
 
