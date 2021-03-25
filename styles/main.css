@@ -95,7 +95,7 @@ header {
     animation-duration: 1s;
 }
 
-.fixed {
+#sidenav-fixed {
     position: static;
     top: 40px;
 }

@@ -10,15 +10,15 @@ It is recommended that this is run on an Apache web server with PHP 7.1+.
     * Linux: On Debian-based distributions, download and install Apache by opening a terminal and running `sudo apt update && sudo apt install -y apache2`.
       * Additional configuration is required, please see ***Linux Configuration*** below.
 
-1. Navigate to your system's public HTML directory (`cd /Applications/MAMP/htdocs` on Mac, `cd C:\xampp\htdocs` on Windows, or `cd /var/www/html/` on Linux). 
-1. Clone the repository `git clone https://github.com/dllargent/CS4MS-Website`
-1. Start the web server. On MAMP and XAMPP, click `Start Server`.
-1. Visit http://localhost/CS4MS-Website in your browser, and the website should appear. The port number may vary, check your configuration. On MAMP, it will be http://localhost:8888/CS4MS-Website by default.
+1. Use a terminal to navigate to the server's public HTML directory (`cd /Applications/MAMP/htdocs` on Mac, `cd C:\xampp\htdocs` on Windows, or `cd /var/www/html/` on Linux). 
+1. Clone the repository by typing `git clone https://github.com/dllargent/CS4MS-Website.git`.
+1. Start the Apache server. On macOS or Windows, open the MAMP/XAMPP Control Panel and select the `Start` button next to Apache. On Linux, the server should already be running.
+1. Visit http://localhost/CS4MS-Website in your browser, and the website should appear. The port number may vary, check your configuration. On macOS, it will be http://localhost:8888/CS4MS-Website by default.
   
 ### Linux Configuration
 1. After installing the Apache server, install PHP by running `sudo apt install -y php libapache2-mod-php`.
 1. Open the Apache configuration file in the nano editor by typing `sudo nano /etc/apache2/apache2.conf`.
-1. Find the tag that begins with `<Directory /var/www/>`. Change the line that says `AllowOverride None` to `AllowOverride All`.
+1. Find the tag that begins with `<Directory /var/www/>`. Change the line that says `AllowOverride None` to `AllowOverride All` and save changes.
 1. Back in the terminal, type `sudo a2enmod rewrite && sudo systemctl restart apache2`.
 1. Resume at step 2 in ***Set Up***.
 
