@@ -1,6 +1,6 @@
-let x = window.matchMedia("(min-width: 700px)");
-window.onscroll = function () { scrollFunction(x) };
-function scrollFunction(x) {
+let queryList = window.matchMedia("(min-width: 700px)");
+window.onscroll = function () { scrollFunction(queryList) };
+function scrollFunction(queryList) {
 	// var width = Math.max(window.screen.width, window.innerWidth);
 	if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250 && window.innerWidth > 700) {
 		document.getElementById("sidenav").style.width = "200px";
@@ -14,4 +14,4 @@ function scrollFunction(x) {
 		document.getElementById("sidenav-fixed").style.position="static";
 	}
 }
-x.addListener(scrollFunction);
+queryList.addEventListener('change', scrollFunction);

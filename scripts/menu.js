@@ -22,6 +22,9 @@ const isIndexPathAlternative = () => {
 };
 
 const makeMenuItemActive = (item) => {
-	item.classList.add('w3-white');
-	item.classList.remove('w3-hover-white');
+	//Home button shouldn't be set to active since it is the default state
+	if (item.innerHTML.replace(/\s/g, '') !== "Home"){
+		item.classList.add('w3-white');
+		item.classList.remove('w3-hover-white');
+	}
 };
