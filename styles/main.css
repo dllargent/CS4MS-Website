@@ -18,6 +18,10 @@ a[href]:not(.w3-bar-item) {
     text-decoration: underline;
 }
 
+a[href]:not(.w3-bar-item):hover {
+    text-decoration: none;
+}
+
 a.no-decoration {
     text-decoration: none !important;
 }
@@ -152,7 +156,7 @@ header {
 
 .logo {
     height: 100px;
-    margin-top: 8px;
+    margin-top: 18px;
 }
 
 .input-box {
@@ -572,4 +576,9 @@ li:hover > .down-arrow-toggle::after,
 
 .row.center > * {
     flex: 1;
+}
+
+.source-footer {
+    margin-left: 5%;
+    font-size: 15px;
 }
