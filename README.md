@@ -4,16 +4,19 @@ The CS4MS website is used to disseminate resources to K-12 educators for teachin
 ## Set up
 It is recommended that this is run on an Apache web server with PHP 7.1+.
 
-1. Install Apache Server
+1. Install the Apache web server.
     * Windows: Download and install [XAMPP](https://www.apachefriends.org/index.html).
     * macOS: Download and install [MAMP](https://www.mamp.info/en/mamp/mac/).
     * Linux: On Debian-based distributions, download and install Apache by opening a terminal and running `sudo apt update && sudo apt install -y apache2`.
       * Additional configuration is required, please see ***Linux Configuration*** below.
 
-1. Use a terminal to navigate to the server's public HTML directory (`cd /Applications/MAMP/htdocs` on Mac, `cd C:\xampp\htdocs` on Windows, or `cd /var/www/html/` on Linux). 
+1. Use a terminal/command prompt window to navigate to the server's public HTML directory (`cd /Applications/MAMP/htdocs` on Mac, `cd C:\xampp\htdocs` on Windows, or `cd /var/www/html/` on Linux). 
 1. Clone the repository by typing `git clone https://github.com/dllargent/CS4MS-Website.git`.
-1. Start the Apache server. On macOS or Windows, open the MAMP/XAMPP Control Panel and select the `Start` button next to Apache. On Linux, the server should already be running.
-1. Visit http://localhost/CS4MS-Website in your browser, and the website should appear. The port number may vary, check your configuration. On macOS, it will be http://localhost:8888/CS4MS-Website by default.
+1. Start the Apache server.
+   * Windows: open the XAMPP Control Panel and click the `Start` button to the right of the Apache module.
+   * macOS: Open the MAMP Control Panel and click the `Start Server` button.
+   * Linux: Apache should already be running.
+1. Visit https://localhost/CS4MS-Website in your browser, and the website should appear (if a security warning pops up, click to accept the risks and continue).
   
 ### Linux Configuration
 1. After installing the Apache server, install PHP by running `sudo apt install -y php libapache2-mod-php`.
