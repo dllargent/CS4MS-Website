@@ -67,8 +67,6 @@ class Head
     public static function getRoot(): string
     {
         $documentRoot = str_replace("/", DIRECTORY_SEPARATOR, realpath(__DIR__ . "/../../"));
-        //echo realpath(__DIR__ . "/../../");
-        //die();
         return str_replace($documentRoot, '', realpath(__DIR__ . "/../")) . DIRECTORY_SEPARATOR;
     }
 
