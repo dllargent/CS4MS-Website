@@ -2,7 +2,7 @@
 The CS4MS website is used to disseminate resources to K-12 educators for teaching computer science topics.
 
 ## Set up
-It is recommended that this is run on an Apache web server with PHP 7.1+.
+It is recommended that this is run on an Apache web server with PHP 7.4+.
 
 1. Install the Apache web server.
     * Windows: Download and install [XAMPP](https://www.apachefriends.org/index.html).
@@ -16,7 +16,7 @@ It is recommended that this is run on an Apache web server with PHP 7.1+.
    * Windows: open the XAMPP Control Panel and click the `Start` button to the right of the Apache module.
    * macOS: Open the MAMP Control Panel and click the `Start Server` button.
    * Linux: Apache should already be running.
-1. Visit https://localhost/CS4MS-Website in your browser, and the website should appear (if a security warning pops up, click to accept the risks and continue).
+1. Visit https://localhost/CS4MS-Website in your browser, and the website should appear. The port may vary, check your configuration. On MAMP, it may be https://localhost:8888/CS4MS-Website by default.
   
 ### Linux Configuration
 1. After installing the Apache server, install PHP by running `sudo apt install -y php libapache2-mod-php`.
@@ -66,6 +66,11 @@ Documents referenced on the website.
 ### Components
 This contains html files for reused components across the site. If the head, footer, or navbar is changed here,
 it will change on every page.
+
+### Additional Notes
+- Testing Framework
+    - ***Future developers:*** This project has had some issues with deployment to the live site in the past. 
+      It would be in your best interest to set up a testing framework before making any modifications to the PHP code, which will ensure that everything is working correctly before a new version is deployed. Please remove this section from the README once a testing framework has been implemented.
 
 ## Miscellaneous
 NOTE: The CS4MSPromoVideoCC/CS4MSPromoVideoCC.mp4 file is not included in this repo. Apparently the file is too large. 
