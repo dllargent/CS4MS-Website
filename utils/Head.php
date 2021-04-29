@@ -1,4 +1,6 @@
 <?php
+
+require_once __DIR__ . "/../bootstrap.php";
 /**
  * Created by PhpStorm.
  * User: Drew
@@ -37,7 +39,7 @@ class Head
         $html = str_replace("%{TITLE}%", $this->title, $html);
         $html = str_replace("%{STYLESHEETS}%", $this->getStyleSheetsHtml(), $html);
         $html = str_replace('%{SCRIPTS}%', $this->getScriptsHtml(), $html);
-        $html = str_replace('%{DOCUMENT_BASE}%', self::getRoot(), $html);
+        $html = str_replace('%{DOCUMENT_BASE}%', BASE_URL, $html);
         return $html;
     }
 
@@ -63,16 +65,9 @@ class Head
         });
         return $scriptsHtml;
     }
-
-    public static function getRoot(): string
-    {
-        $documentRoot = str_replace("/", DIRECTORY_SEPARATOR, realpath(__DIR__ . "/../../"));
-        return str_replace($documentRoot, '', realpath(__DIR__ . "/../")) . DIRECTORY_SEPARATOR;
-    }
-
     private function getScriptString(string $scriptName): string
     {
-        $root = self::getRoot();
+        $root = BASE_URL;
         return "<script src='{$root}/scripts/$scriptName.js'></script>";
     }
 }
