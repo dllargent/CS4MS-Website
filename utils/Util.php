@@ -12,9 +12,9 @@ class Util
 {
 	public static function getPagePath() {
 		$uri = $_SERVER['REQUEST_URI'];
-		if (Head::getRoot() !== "/") {
+		if (BASE_URL !== "/") {
             $uri = str_replace("\\", "/", $uri);
-            $root = str_replace("\\", "/", Head::getRoot());
+            $root = str_replace("\\", "/", BASE_URL);
 			$filepath = str_replace($root, "", urldecode($uri));
 		} else {
 			$filepath = urldecode($uri);

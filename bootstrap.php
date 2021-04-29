@@ -1,0 +1,3 @@
+<?php
+define("BASE_URL", DIRECTORY_SEPARATOR . basename(__DIR__) . DIRECTORY_SEPARATOR);
+?>
