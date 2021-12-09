@@ -603,3 +603,14 @@ li:hover > .down-arrow-toggle::after,
   text-decoration: none !important;
   color: #b6002a;
 }
+
+.page-container {
+  min-width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+
+.page-container .video-container {
+  margin: 1rem;
+}
