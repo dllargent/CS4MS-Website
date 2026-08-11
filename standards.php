@@ -6,12 +6,13 @@ require_once __DIR__ . "/utils/Util.php";
 
 $head = new Head("Standards");
 $head->addStyleSheet('main');
+$head->addScript('sidebar-scroll');
+$head->addScript('search');
 echo $head->getHtml();
 
 $navbar = new Navbar();
+$navbar->addSearchBar();
 echo $navbar->getHtml();
-echo "<div class='standards-wrapper'>";
 include Util::getPagePath();
-echo "</div>";
 include __DIR__ . "/components/footer.html";
 

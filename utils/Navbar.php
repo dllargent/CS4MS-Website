@@ -22,21 +22,13 @@ class Navbar
 
 	public function getHtml(): string
 	{
-		$this->html = file_get_contents(__DIR__ . "/../components/navbar/navbar.html");
-		$this->addDropdowns(['standards', 'resources']);
+		$this->html = file_get_contents(__DIR__ . "/../components/navbar/navbar.html"); 
 		$this->html = str_replace("%{SEARCH}%",
 			$this->hasSearchBar
 				? file_get_contents(__DIR__ . "/../components/navbar/search-bar.html")
 				: "",
 			$this->html);
 		return $this->html;
-	}
-
-	private function addDropdowns(array $dropdownNames) {
-		array_walk($dropdownNames, function (string $name) {
-			$dropdown = new Dropdown($name);
-			$this->html = str_replace('%{' . strtoupper($name) . '_DROPDOWN}%', $dropdown->getHtml(), $this->html);
-		});
 	}
 
 }
